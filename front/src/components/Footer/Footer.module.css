@@ -1,0 +1,7 @@
+.footer {
+  @apply bg-secondary w-full;
+}
+
+.innerFooter {
+  @apply flex justify-center items-center h-footer;
+}
