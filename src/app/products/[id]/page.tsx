@@ -2,13 +2,7 @@ import { getProduct } from "@/services/productsServices";
 import { notFound } from "next/navigation";
 import Detail from "@/components/Detail/Detail";
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-const page = async ({ params }: PageProps) => {
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
 
   const product = await getProduct(parseInt(id));
